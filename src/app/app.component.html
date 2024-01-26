@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="left-column">
+    <app-map 
+      (svgIdCountry)="selectedCountrySvgId = $event"
+      (capitalCountry)="selectedCountryCapital = $event"
+      (regionCountry)="selectedCountryRegion = $event"
+      (incomeCountry)="selectedCountryIncome = $event"
+      (longitudeCountry)="selectedCountryLongitude = $event"
+      (latitudeCountry)="selectedCountryLatitude = $event"
+    ></app-map>
+  </div>
+  <div class="right-column">
+    <app-map-information 
+      [countryId]="selectedCountrySvgId"
+      [countryCapital]="selectedCountryCapital"
+      [countryRegion]="selectedCountryRegion"
+      [countryIncome]="selectedCountryIncome"
+      [countryLongitude]="selectedCountryLongitude"
+      [countryLatitude]="selectedCountryLatitude"
+    ></app-map-information>
+  </div>
+</div>
